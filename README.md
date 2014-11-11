@@ -36,5 +36,7 @@ I changed it so that before XBMC's load, I change the permissions of /dev/input,
 I also added a line after XBMC loads, to start the script read.py (as root).
 
 If you want to use this,
+
 1.	replace xbmc.conf in /etc/init/ with the one that is found here.
+
 2.	move read.py and XBMCClient.py to /home/xbian (or another place, and change the line that calls read.py in xbmc.conf accordingly).
