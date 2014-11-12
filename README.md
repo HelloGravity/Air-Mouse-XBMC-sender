@@ -20,12 +20,17 @@ It only respond to key presses, and ignores all mouse events, so that the device
 The script XBMCClient.py is taken from the XBMC repo:
 https://github.com/xbmc/xbmc/blob/master/tools/EventClients/lib/python/xbmcclient.py
 
-The script reads the input from "/dev/input/" and searches the files that start with "usb-EXCEL_EXCELDIGI_Wireless_Device-".
+The script reads the input from "/dev/input/" and searches the files that start with
+"usb-EXCEL_EXCELDIGI_Wireless_Device-".
 
 Since XBMC uses the EVIOCGRAB operation, it is impossible to read the files after XBMC has launched, so in order to fix that, the script is called from autostart.sh, and it also uses EVIOCGRAB, to prevent XBMC from accessing the device files.
 
 If you want to use this (instructions are for OpenElec on the Raspberry Pi):
+
 1.	Create an autostart.sh file as shown here: http://wiki.openelec.tv/index.php?title=Autostart.sh
+
 2.	Take script.py and XBMCClient.py and put them in a directory (I used /storage/AirMouseScript/)
+
 3.	Change autostart.sh to run script.py (like in the provided autostart.sh), and don't forget the '&' in the end of the command.
+
 4.	Put airmouse.xml in /storage/.kodi/userdata/keymaps or /storage/.xbmc/userdata/keymaps, depending on your OpenElec Version.
