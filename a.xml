@@ -1,0 +1,44 @@
+<keymap>
+  <global>
+    <keyboard>
+        <leftwindows>ContextMenu</leftwindows>
+      <volume_down>noop</volume_down>
+      <volume_up>noop</volume_up>
+
+      <left>Left</left>
+      <right>Right</right>
+      <up>Up</up>
+      <down>Down</down>
+	<return>noop</return>
+      <home>XBMC.ActivateWindow(Home)</home>
+      <pageup>PageUp</pageup>
+      <pagedown>PageDown</pagedown>
+      <volume_mute>Mute</volume_mute>
+	<backspace>noop</backspace>
+    </keyboard>
+
+    <mouse>
+      <leftclick>noop</leftclick>
+      <rightclick>noop</rightclick>
+      <mousedrag>noop</mousedrag>
+      <mousemove>noop</mousemove>
+    </mouse>
+  </global>
+  <FullscreenVideo>
+
+        <keyboard>
+		
+		<enter>Pause</enter>
+                <return>noop</return>
+                <leftwindows>OSD</leftwindows>
+                  <pageup>FastForward</pageup>
+                  <pagedown>Rewind</pagedown>
+        </keyboard>
+         <mouse>
+                <leftclick>noop</leftclick>
+                <rightclick>noop</rightclick>
+    </mouse>
+
+  </FullscreenVideo>
+</keymap>
+
