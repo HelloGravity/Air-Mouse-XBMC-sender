@@ -1,0 +1,26 @@
+<keymap>
+	<global>
+		<keyboard>
+			<enter>Select</enter>
+			<backspace>Back</backspace>
+			<volume_up>VolumeUp</volume_up>
+			<volume_down>VolumeDown</volume_down>
+			<left>Left</left>
+			<up>Up</up>
+			<down>Down</down>
+			<right>Right</right>
+			<menu>ContextMenu</menu>
+			<home>ActivateWindow(Home)</home>
+			<pageup>PageUp</pageup>
+			<pagedown>PageDown</pagedown>
+			<volume_mute>Mute</volume_mute>
+		</keyboard>
+	</global>
+	<FullscreenVideo>
+		<keyboard>
+			<enter>PlayPause</enter>
+			<menu>OSD</menu>
+		</keyboard>
+	</FullscreenVideo>
+</keymap>
+
