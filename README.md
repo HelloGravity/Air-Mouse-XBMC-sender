@@ -1,9 +1,6 @@
 Air-Mouse-XBMC-sender
 =====================
 
-The problem:
-
-
 I am using this cheap air mouse I got from eBay:
 
 
