@@ -18,6 +18,7 @@
 	</global>
 	<FullscreenVideo>
 		<keyboard>
+			<backspace>Stop</backspace>
 			<enter>PlayPause</enter>
 			<menu>OSD</menu>
 		</keyboard>
