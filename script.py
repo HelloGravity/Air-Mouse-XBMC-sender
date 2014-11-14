@@ -1,5 +1,22 @@
 import sys, select,os, XBMCClient, time, threading, fcntl
 
+keyMap = {
+	272:"enter",
+	28:"enter",
+	273:"backspace",
+	115:"volume_up",
+	114:"volume_down",
+	105:"left",
+	103:"up",
+	108:"down",
+	106:"right",
+	127:"menu",
+	172:"home",
+	104:"pageup",
+	109:"pagedown",
+	113:"volume_mute",
+	116:"power"
+};
 done = False;
 input_files = [ "/dev/input/by-id/" + f for f in os.listdir("/dev/input/by-id/") if f.startswith("usb-EXCEL_EXCELDIGI_Wireless_Device-") ]
 
@@ -36,37 +53,9 @@ class MainThread(threading.Thread):
 		if down > 1:
 			return;
 		buttonId = (ord(data[10]) + (ord(data[11])<< 8));
-		keyCode = "";	
-		if buttonId == 272 or buttonId == 28:
-			keyCode = "enter";
-		elif buttonId == 273:
-			keyCode = "backspace";
-		elif buttonId == 115:
-			keyCode = "volume_up";
-		elif buttonId == 114:
-			keyCode = "volume_down";
-		elif buttonId == 105:
-			keyCode = "left";
-		elif buttonId == 103:
-			keyCode = "up";
-		elif buttonId == 108:
-			keyCode = "down";
-		elif buttonId == 106:	
-			keyCode = "right";
-		elif buttonId == 127:
-			keyCode = "menu";
-		elif buttonId == 172:
-			keyCode = "home";
-		elif buttonId == 104:
-			keyCode = "pageup";
-		elif buttonId == 109:
-			keyCode = "pagedown";
-		elif buttonId == 113:
-			keyCode = "volume_mute";	
-		else:
-			return; 
-		communicationThread.sendKey(keyCode, down);		
-
+		if buttonId in keyMap:
+			communicationThread.sendKey(keyMap[buttonId], down);		
+		
 	def read(self):
 		global done;
 		poll = select.poll();
